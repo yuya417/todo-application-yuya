@@ -1,0 +1,14 @@
+.container
+  %h2.title-font Sign in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field.text-box-font
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text-box'
+    .field.text-box-font
+      = f.label :password
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: 'text-box'
+    .actions
+      = f.submit "Submit", class: 'text-box, submit-btn '
+  = render "devise/shared/links"
