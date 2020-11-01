@@ -1,6 +1,15 @@
 .container
   .card
-    %h3
-      = @board.title
+    .card-flexbox
+      %h3
+        = @board.title
+      .dropdown
+        = image_tag 'Combined Shape.png', class: 'dropbtn'
+        .dropdown-content
+          %p
+            = link_to 'Edit', edit_board_path(@board)
+      -#     %p
+      -#       = link_to 'Delete', 
     %p
       = @board.content
+    = image_tag 'Oval2.png'
