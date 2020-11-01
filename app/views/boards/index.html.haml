@@ -2,11 +2,12 @@
   %h2.title-text
     All Boards
   - @boards.each do |board|
-    .card
-      %h3
-        = board.title
-      %p
-        = board.content
+    = link_to board_path(id: board.id) do
+      .card
+        %h3
+          = board.title
+        %p
+          = board.content
   .new-card
     %p
       = link_to '+ Add new board', new_board_path

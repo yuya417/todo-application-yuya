@@ -1,7 +1,7 @@
 .container
   %h2.title-text
     New Board
-  = form_with(model: @board, local: true) do |f|
+  = form_with(model: @board, url: boards_path,method: 'post', local: true) do |f|
     %div.name-text
       = f.label :title, 'Name'
     %div
