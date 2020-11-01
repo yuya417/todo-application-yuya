@@ -4,9 +4,27 @@
   padding: 25px 25px;
   margin: 30px;
 
-  h3 {
-    margin: 0;
+  img {
+    margin-top: 36px;
   }
+
+  .card-flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    h3 {
+      margin: 0;
+      margin-top: 32px;
+    }
+
+    .edit-btn {
+      margin: 0;
+      margin-bottom: 36px;
+      margin-top: 39px;
+    }
+
+  }
+
 
   p {
     margin: 0;
