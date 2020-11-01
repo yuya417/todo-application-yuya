@@ -11,4 +11,5 @@ Board.create(user_id: 1, title: 'サンプル2', content: 'ダミーデータ2')
 Board.create(user_id: 1, title: 'サンプル3', content: 'ダミーデータ3')
 Board.create(user_id: 1, title: 'サンプル4', content: 'ダミーデータ4')
 Board.create(user_id: 1, title: 'サンプル5', content: 'ダミーデータ5')
+Board.create(user_id: 5, title: 'サンプル6', content: 'ダミーデータ6')
 
