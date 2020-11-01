@@ -1,37 +1,67 @@
-.title-font {
-  margin-top: 10px;
-  font-size: 26px;
-  color: #000000;
-  line-height: 36px;
-  font-weight: 800;
-  font-family: Avenir;
-  padding-top: 20px;
-}
-
-.submit-btn {
-  position: absolute;
-  width: 90%;
-  height: 40px;
-  background: #F8BD1C;
-  border-radius: 4px;
+.dropbtn {
   border: none;
-  font-size: 18px;
-  line-height: 25px;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  bottom: 32px;
 }
 
-.link-form {
-  color: #000000;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  font-weight: normal;
+  display: none;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  &.mini {
+    min-width: 100px;
+  }
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
   text-decoration: none;
   display: block;
-  margin-top: 30px;
-  margin-left: 5px;
 }
 
-.link-form2 {
-  margin-top: 5px;
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.actions {
+  text-align: center;
+  .btn-primary {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 90%;
+    height: 40px;
+    background: #F8BD1C;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.title-text {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 36px;
+  // margin: 31px 30px 35px 30px;
+  margin: 30px auto;
+  margin-left: 31px;
+}
+
+.link-text {
+  display: block;
+  padding-left: 31px;
+  padding-top: 5px;
 }

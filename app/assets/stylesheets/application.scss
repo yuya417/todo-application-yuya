@@ -15,31 +15,26 @@
  */
 
  @import 'commons';
+ @import 'form';
+ @import 'header';
 
- .container {
-  width: 90%;
-  padding: 5%;
+
+ html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
 }
 
-.top-title {
-  // position: absolute;
-  width: 56px;
-  height: 25px;
-  left: 30px;
-  top: 17px;
-  font-family: Avenir;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-  color: #000000;
-  margin: 0;
-  padding-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 10px;
+body {
+  height: 100%;
+  font-size: 1em;
 }
 
-.border-bottom {
-  border-bottom: 1px solid #F2F2F2;;
+.container {
+  // padding: 16px 16px;
+  width: 100%;
 }
-
