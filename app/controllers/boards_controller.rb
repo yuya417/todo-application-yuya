@@ -36,6 +36,12 @@ class BoardsController < ApplicationController
     end
   end
 
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy!
+    redirect_to root_path, notice: '削除に成功しました'
+  end
+
   private
   def board_params
     params.require(:board).permit(:title, :content).merge(user_id: current_user.id)
