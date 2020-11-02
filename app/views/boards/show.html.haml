@@ -8,8 +8,7 @@
         .dropdown-content
           %p
             = link_to 'Edit', edit_board_path(@board)
-      -#     %p
-      -#       = link_to 'Delete', 
+            = link_to 'Delete', board_path(@board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
     %p
       = @board.content
     = image_tag 'Oval2.png'
