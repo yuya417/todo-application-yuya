@@ -1,19 +1,19 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create]
+  before_action :set_board, only: [:show]
+  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
   def index
     @boards = Board.all
   end
 
   def show
-    @board = Board.find(params[:id])
   end
 
   def new
-    @board = Board.new
+    @board = current_user.boards.build
   end
 
   def create
-    @board = Board.new(board_params)
+    @board = current_user.boards.build(board_params)
     if @board.save
       redirect_to board_path(@board), notice: '保存できました！'
     else
@@ -23,11 +23,11 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    @board = Board.find(params[:id])
+    @board = current_user.boards.find(params[:id])
   end
 
   def update
-    @board = Board.find(params[:id])
+    @board = current_user.boards.find(params[:id])
     if @board.update(board_params)
       redirect_to board_path(@board), notice: '更新できました！'
     else
@@ -37,7 +37,7 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    board = Board.find(params[:id])
+    board = current_user.boards.find(params[:id])
     board.destroy!
     redirect_to root_path, notice: '削除に成功しました'
   end
@@ -45,6 +45,10 @@ class BoardsController < ApplicationController
   private
   def board_params
     params.require(:board).permit(:title, :content).merge(user_id: current_user.id)
+  end
+
+  def set_board
+    @board = Board.find(params[:id])
   end
   
 end

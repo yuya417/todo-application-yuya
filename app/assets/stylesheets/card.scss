@@ -4,9 +4,26 @@
   padding: 25px 25px;
   margin: 30px;
 
-  img {
+  .user-info {
+    display: flex;
     margin-top: 36px;
+    margin-bottom: 20px;
+
+    .display-name {
+      p {
+        padding-left: 20px;
+      }
+    }
+
   }
+
+  .date-font {
+    p {
+      color:#949191;
+      font-size: 15px;
+    }
+  }
+
 
   .card-flexbox {
     display: flex;

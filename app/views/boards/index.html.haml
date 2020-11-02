@@ -8,7 +8,13 @@
           = board.title
         %p
           = board.content
-        = image_tag 'Oval2.png'
+        - if board.user.present?
+          .user-info
+            = image_tag 'Oval2.png'
+            .display-name
+              %p= board.user.display_name
+        .date-font
+          %p= board.display_created_at
   .new-card
     %p
       = link_to '+ Add new board', new_board_path
