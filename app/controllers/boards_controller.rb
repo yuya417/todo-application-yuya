@@ -36,6 +36,10 @@ class BoardsController < ApplicationController
     end
   end
 
+  def delete
+    
+  end
+
   private
   def board_params
     params.require(:board).permit(:title, :content).merge(user_id: current_user.id)
