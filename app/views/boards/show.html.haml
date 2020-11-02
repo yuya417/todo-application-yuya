@@ -3,12 +3,13 @@
     .card-flexbox
       %h3
         = @board.title
-      .dropdown
-        = image_tag 'Combined Shape.png', class: 'dropbtn'
-        .dropdown-content
-          %p
-            = link_to 'Edit', edit_board_path(@board)
-            = link_to 'Delete', board_path(@board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
+      - if user_signed_in?
+        .dropdown
+          = image_tag 'Combined Shape.png', class: 'dropbtn'
+          .dropdown-content
+            %p
+              = link_to 'Edit', edit_board_path(@board)
+              = link_to 'Delete', board_path(@board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
     %p
       = @board.content
     = image_tag 'Oval2.png'

@@ -1,0 +1,25 @@
+.profile {
+  padding: 31px;
+  text-align: center;
+
+  .profile-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    img {
+      margin-right: 20px;
+      object-fit: cover;
+      width: 100px;
+      height: 100px;
+    }
+
+    a {
+      padding-top: 70px;
+    }
+  }
+
+  .profile-nickname {
+    margin-bottom: 60px;
+  }
+}
