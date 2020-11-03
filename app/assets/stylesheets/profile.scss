@@ -1,6 +1,9 @@
 .profile {
   padding: 31px;
   text-align: center;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin: 30px;
 
   .profile-img {
     display: flex;
@@ -8,7 +11,6 @@
     margin-top: 60px;
     margin-bottom: 60px;
     img {
-      margin-right: 20px;
       object-fit: cover;
       width: 100px;
       height: 100px;
@@ -21,5 +23,23 @@
 
   .profile-nickname {
     margin-bottom: 60px;
+    p {
+      font-size: 30px;
+      font-weight: bold;
+    }
   }
+
+  .profile-introduction {
+    margin-bottom: 100px;
+    p {
+      font-size: 15px;
+    }
+  }
+
+  a {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
+
 }
