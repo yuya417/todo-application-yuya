@@ -17,5 +17,16 @@
         = image_tag 'Oval2.png'
         .display-name
           %p= @board.user.display_name
-    .date-font
-      %p= @board.display_created_at
+-# Tasks
+%h1.title-text
+  Tasks
+- @tasks.each do |task|
+  = link_to board_task_path(task) do
+    .card
+      %h3= task.title
+      %p= task.content
+      .task-flexbox
+        %p
+          期限：
+        %p= task.limit
+= link_to 'New Tasks', new_board_task_path(@board)
