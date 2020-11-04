@@ -1,4 +1,6 @@
 .container
+  %h2.title-text
+    New Card
   = form_with(model: @task, url: board_tasks_path(@task.board), local: true) do |f|
     %div.name-text
       = f.label :title, 'Name'
