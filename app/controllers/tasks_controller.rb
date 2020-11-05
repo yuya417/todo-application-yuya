@@ -12,6 +12,7 @@ class TasksController < ApplicationController
   def create
     board = Board.find(params[:board_id])
     @task = board.tasks.build(task_params)
+    binding.pry
     if @task.save
       redirect_to board_path(board), notice: 'タスクを追加しました！'
     else
