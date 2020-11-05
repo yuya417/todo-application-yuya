@@ -17,6 +17,7 @@
 #  index_tasks_on_user_id   (user_id)
 #
 class Task < ApplicationRecord
+  has_one_attached :eyecatch
   belongs_to :user
   belongs_to :board
 
