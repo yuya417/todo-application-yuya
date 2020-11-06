@@ -1,0 +1,36 @@
+.task-title {
+  margin-top: 32px;
+  margin-left: 31px;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+
+  }
+
+  .dropdown {
+    margin-top: 30px;
+    margin-right: 50px;
+    .dropdown-content {
+      width: 30px;
+      height: 80px;
+      
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card-task {
+  background-color: white;
+  margin: 31px;
+  .eyecatch-img {
+    img {
+      object-fit: cover;
+      width: 100%;
+      margin-bottom: 27px;
+      border-radius: 30px;
+    }
+  }
+
+}
