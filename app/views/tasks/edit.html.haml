@@ -1,7 +1,7 @@
 .container
   %h2.title-text
-    New Card
-  = form_with(model: @task, url: board_task_path(@task.board), method: 'put', local: true) do |f|
+    Edit Card
+  = form_with(model: @task, url: board_task_path(@task), method: 'put', local: true) do |f|
     %div.name-text
       = f.label :eyecatch, 'Eyecatch'
     %div
