@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -18,6 +19,14 @@ class TasksController < ApplicationController
       flash.now[:error] = 'タスクを追加できませんでした'
       render :new
     end
+  end
+
+  def edit
+    board = Board.find(params[:board_id])
+    @task = board.tasks.build
+  end
+
+  def update
   end
 
   private

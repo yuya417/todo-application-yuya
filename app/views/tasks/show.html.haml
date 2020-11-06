@@ -1,1 +1,19 @@
-show tasks
+.container
+  .card
+    .card-flexbox
+      %h3
+        = @task.title
+      -# - if user_signed_in? && current_user.task_has_written?(@task)
+      -#   .dropdown
+      -#     = image_tag 'Combined Shape.png', class: 'dropbtn'
+      -#     .dropdown-content
+      -#       %p
+      -#         = link_to 'Edit', edit_board_path(@task)
+      -#         = link_to 'Delete', board_path(@task), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
+    %p
+      = @task.content
+    -# - if @task.user.present?
+    -#   .user-info
+    -#     = image_tag 'Oval2.png'
+    -#     .display-name
+    -#       %p= @task.user.display_name

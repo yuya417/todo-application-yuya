@@ -31,9 +31,11 @@ class User < ApplicationRecord
     boards.exists?(id: board.id)
   end
 
-  # def tasks_has_written?(task)
-  #   boards.exists?(id: board.id)
+  # def task_has_written(task)
+  #   tasks.exists?(id: task.id)
   # end
+
+  
 
   def display_name
     self.email.split('@').first
