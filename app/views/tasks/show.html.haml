@@ -16,8 +16,4 @@
     .card-flexbox
       %p
         = @task.content
-    -# - if @task.user.present?
-    -#   .user-info
-    -#     = image_tag 'Oval2.png'
-    -#     .display-name
-    -#       %p= @task.user.display_name
+  = link_to 'New Comment', new_board_task_comment_path(task_id: @task.id)
