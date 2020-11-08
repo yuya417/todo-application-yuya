@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     task = Task.find(params[:task_id])
     @comment = task.comments.build(comment_params)
     if @comment.save
-      redirect_to board_task_path(task), notice: 'コメントを追加しました！'
+      redirect_to board_task_path(id: task.id), notice: 'コメントを追加しました！'
     else
       flash.now[:error] = 'コメントを投稿できませんでした'
       render :new
@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    
     params.require(:comment).permit(:content).merge(user_id: current_user.id)
   end
 

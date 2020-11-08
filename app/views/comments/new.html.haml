@@ -1,6 +1,6 @@
 .container
   .comment
-    = form_with(model: @comment, url: board_task_comments_path(board_id: @comment.task.board_id, task_id: @comment.task.id),local: true) do |f|
+    = form_with(model: @comment, url: board_task_comments_path(board_id: @comment.task.board.id, task_id: @comment.task.id),local: true) do |f|
       %div.comment-text
         = f.label :content, 'New Comment', class: 'comment-content'
       %div
