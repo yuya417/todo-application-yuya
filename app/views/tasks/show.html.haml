@@ -6,8 +6,8 @@
       = image_tag 'Combined Shape.png', class: 'dropbtn'
       .dropdown-content
         %p
-          = link_to 'Edit', edit_board_task_path(@task)
-          = link_to 'Delete', board_task_path(@task), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
+          = link_to 'Edit', edit_board_task_path(board_id: @task.board_id, id: @task.id)
+          = link_to 'Delete', board_task_path(board_id: @task.board_id, id: @task.id), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？'}
   .card-task        
     - if @task.eyecatch.attached?
       .eyecatch-img
