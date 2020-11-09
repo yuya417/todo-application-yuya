@@ -33,4 +33,6 @@
           期限：
         %p= task.limit
       %p= task.user.email
-= link_to 'New Tasks', new_board_task_path(@board)
+.new-card
+  %p
+    = link_to '+ Add new card', new_board_task_path(@board)
