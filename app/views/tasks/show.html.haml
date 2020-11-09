@@ -16,4 +16,15 @@
     .card-flexbox
       %p
         = @task.content
-  = link_to 'New Comment', new_board_task_comment_path(task_id: @task.id)
+  .show-comment
+    %h3
+      Comment
+    - @comments.each do |comment|
+      .flex-comment
+        .comment-img
+          = image_tag 'Oval.png'
+        .comment-text
+          %p= comment.content
+  .new-card
+    %p
+      = link_to '+ Add new comment', new_board_task_comment_path(task_id: @task.id)

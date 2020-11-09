@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @comments = @task.comments.all
   end
 
   def new
@@ -28,7 +29,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      redirect_to board_task_path(@task), notice: 'タスクを更新しました！'
+      redirect_to board_task_path(board_id: @task.board_id), notice: 'タスクを更新しました！'
     else
       flash.now[:error] = 'タスクを更新できませんでした'
       render :edit
